@@ -45,4 +45,22 @@ class HomeRepo {
       return "Error${error.toString()}";
     }
   }
+
+
+//دي انا عاملها بجرب بيها لو هاينفع اضيف بيها للفيفوريت اسكرين ولا لا
+   static addToFavorite(int productId ) async {
+    try {
+      final response = await DioServics.dio?.post("/add-to-cart", data: {
+        "product_id": productId,
+      });
+      if (response?.statusCode == 201
+) {
+        return response;
+      } else {
+        return "Error";
+      }
+    } catch (error) {
+      return "Error${error.toString()}";
+    }
+  }
 }

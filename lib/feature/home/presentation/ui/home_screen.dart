@@ -47,6 +47,22 @@ class HomeScreen extends StatelessWidget {
                         ),
                       );
                     }
+                    if (state is AddToFavoriteLoding) {
+                      showDialog(
+                        context: context,
+                        builder: (context) =>
+                            Center(child: CircularProgressIndicator()),
+                      );
+                    } else if (state is AddToFavoriteSuccess) {
+                      Navigator.pop(context);
+
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Added to Favorite successfully"),
+                          backgroundColor: AppColors.primaryColor,
+                        ),
+                      );
+                    }
                   },
                   buildWhen: (prev, curunet) =>
                       curunet is getBestSelerError ||
@@ -59,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                       return GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          childAspectRatio: .5,
+                          childAspectRatio: .47,
                           crossAxisSpacing: 16,
                           mainAxisSpacing: 16,
                         ),
@@ -79,6 +95,12 @@ class HomeScreen extends StatelessWidget {
                           },
                           onTapAddToCart: () {
                             context.read<HomeCubit>().addToCart(
+                              state.productsListe[index].id ?? 0,
+                            );
+                          },
+
+                          onTapAddToFaavorit: () {
+                            context.read<HomeCubit>().addToFavorite(
                               state.productsListe[index].id ?? 0,
                             );
                           },

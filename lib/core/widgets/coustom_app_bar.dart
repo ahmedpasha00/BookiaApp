@@ -14,6 +14,7 @@ class CoustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       
       padding: EdgeInsets.symmetric(horizontal: 16.0.w),
       child: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         title: titel != null ? Text(titel!) : null,
         leading:withBackButton? InkWell(

@@ -39,4 +39,16 @@ class HomeCubit extends Cubit<HomeState> {
       emit(AddToCartSuccess());
     }
   }
+
+
+   addToFavorite(int productId) async {
+    emit(AddToFavoriteLoding());
+    final response = await HomeRepo.addToCart(productId);
+
+    if (response is String) {
+      emit(AddToFavoriteError());
+    } else {
+      emit(AddToFavoriteSuccess());
+    }
+  }
 }

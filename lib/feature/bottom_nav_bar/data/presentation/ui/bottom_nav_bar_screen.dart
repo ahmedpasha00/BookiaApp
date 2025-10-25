@@ -1,4 +1,5 @@
 import 'package:bookia/core/theme/app_colors.dart';
+import 'package:bookia/feature/cart/presentation/cubit/cart_cubit.dart';
 import 'package:bookia/feature/cart/presentation/ui/cart_screen.dart';
 import 'package:bookia/feature/favorit/presentation/ui/favorit_screen.dart';
 import 'package:bookia/feature/home/presentation/cubit/home_cubit.dart';
@@ -18,9 +19,20 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
-    BlocProvider(create: (context) => HomeCubit()..getHomeSlider()..getBestSeller(), child: HomeScreen()),
-    FavoritScreen(),
-    CartScreen(),
+    BlocProvider(
+      create: (context) => HomeCubit()
+        ..getHomeSlider()
+        ..getBestSeller(),
+      child: HomeScreen(),
+    ),
+    BlocProvider(
+      create: (context) => CartCubit()..getCart(),
+      child: FavoritScreen(),
+    ),
+    BlocProvider(
+      create: (context) => CartCubit()..getCart(),
+      child: CartScreen(),
+    ),
     MyAccountScreen(),
   ];
   @override

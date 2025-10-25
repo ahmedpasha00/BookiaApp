@@ -7,15 +7,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-List<String> images = [
-  "https://flux1.ai/_next/image?url=https%3A%2F%2Fr2.flux1.ai%2Ffluxai%2F2024%2F08%2Fcar-3.webp&w=3840&q=75",
-  "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
-  "https://media.istockphoto.com/id/500221637/photo/digital-world.jpg?s=612x612&w=0&k=20&c=wbMfTwRUtss0B5KSWRlH-ivSm8BAjMCBUKSi30d6rYo=",
-  "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80",
+// List<String> images = [
+//   "https://flux1.ai/_next/image?url=https%3A%2F%2Fr2.flux1.ai%2Ffluxai%2F2024%2F08%2Fcar-3.webp&w=3840&q=75",
+//   "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
+//   "https://media.istockphoto.com/id/500221637/photo/digital-world.jpg?s=612x612&w=0&k=20&c=wbMfTwRUtss0B5KSWRlH-ivSm8BAjMCBUKSi30d6rYo=",
+//   "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
+//   "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80",
 
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80",
-];
+//   "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80",
+// ];
 
 class HomeSlider extends StatefulWidget {
   const HomeSlider({super.key});

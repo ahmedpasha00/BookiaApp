@@ -26,3 +26,11 @@ final class getBestSelerSuccess extends HomeState {
 final class AddToCartSuccess extends HomeState {}
 final class AddToCartLoding extends HomeState {}
 final class AddToCartError extends HomeState {}
+
+
+//دي انا عاملها بجرب بيها لو هاينفع اضيف بيها للفيفوريت اسكرين ولا لا
+
+
+final class AddToFavoriteSuccess extends HomeState {}
+final class AddToFavoriteLoding extends HomeState {}
+final class AddToFavoriteError extends HomeState {}
